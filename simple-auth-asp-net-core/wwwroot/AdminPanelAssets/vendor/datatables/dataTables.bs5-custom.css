@@ -1,0 +1,17 @@
+table.dataTable {
+	color: #686d7d;
+	margin-bottom: 15px !important;
+}
+table.dataTable td.highlight {
+	background: #eaf1ff;
+	color: #0f1117;
+}
+.page-link {
+	color: #41ab2e;
+}
+.page-link.active,
+.active > .page-link {
+	background-color: #f5f6fa;
+	border: 1px solid #41ab2e;
+	color: #41ab2e;
+}

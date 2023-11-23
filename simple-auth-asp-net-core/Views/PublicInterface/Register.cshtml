@@ -1,0 +1,43 @@
+@{
+    Layout = "_EmptyLayout";
+}
+@model SimpleAuth.ViewModels.Auth.RegisterVM
+<div class="row">
+    <div class="col-4">
+        @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+        {
+            <div class="alert alert-danger">
+                @Model.ErrorMessage
+            </div>
+        }
+        <form asp-controller="PublicInterface" asp-action="Register" method="post" class="card">
+            <div class="card-header">
+                <h5 class="card-title">
+                    Register
+                </h5>
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <label asp-for="Name"></label>
+                    <input asp-for="Name" type="text" class="form-control">
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Email"></label>
+                    <input asp-for="Email" type="email" class="form-control">
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Password"></label>
+                    <input asp-for="Password" type="password" class="form-control" required>
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-block btn-success">
+                    Register!
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

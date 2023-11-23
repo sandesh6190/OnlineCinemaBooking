@@ -1,0 +1,74 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Content Remove="Views\PublicInterface\Contact.cshtml" />
+      <Content Remove="Views\PublicInterface\Index.cshtml" />
+      <Content Remove="Views\PublicInterface\List.cshtml" />
+      <Content Remove="Views\PublicInterface\Login.cshtml" />
+      <Content Remove="Views\PublicInterface\Register.cshtml" />
+      <Content Remove="Views\Shared\_AdminPanelLayout.cshtml" />
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="AspNetCoreHero.ToastNotification" Version="1.1.0" />
+        <PackageReference Include="BCrypt.Net-Core" Version="1.6.0" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="7.0.11" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.11" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.11">
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+            <PrivateAssets>all</PrivateAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="7.0.11" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.11" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.7">
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+            <PrivateAssets>all</PrivateAssets>
+        </PackageReference>
+    </ItemGroup>
+    <ItemGroup>
+      <Folder Include="Assets\" />
+      <Folder Include="Dto\" />
+      <Folder Include="wwwroot\Uploads\" />
+      <Folder Include="wwwroot\Uploads\Poster\" />
+      <Folder Include="wwwroot\Uploads\Trailer\" />
+    </ItemGroup>
+    <ItemGroup>
+      <UpToDateCheckInput Remove="Views\PublicInterface\Index.cshtml" />
+    </ItemGroup>
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Views\PublicInterface\Contact.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\PublicInterface\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\PublicInterface\List.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\PublicInterface\Login.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\PublicInterface\Register.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Shared\_EmptyLayout.cshtml" />
+    </ItemGroup>
+    <ItemGroup>
+      <None Include="Views\PublicInterface\Contact.cshtml" />
+      <None Include="Views\PublicInterface\Index.cshtml" />
+      <None Include="Views\PublicInterface\List.cshtml" />
+      <None Include="Views\PublicInterface\Login.cshtml" />
+      <None Include="Views\PublicInterface\Register.cshtml" />
+      <None Include="Views\Shared\_AdminPanelLayout.cshtml" />
+    </ItemGroup>
+    <ItemGroup>
+      <UpToDateCheckInput Remove="Views\PublicInterface\List.cshtml" />
+    </ItemGroup>
+    <ItemGroup>
+      <UpToDateCheckInput Remove="Views\PublicInterface\Contact.cshtml" />
+    </ItemGroup>
+    <ItemGroup>
+      <UpToDateCheckInput Remove="Views\PublicInterface\Login.cshtml" />
+    </ItemGroup>
+    <ItemGroup>
+      <UpToDateCheckInput Remove="Views\Shared\_EmptyLayout.cshtml" />
+    </ItemGroup>
+    <ItemGroup>
+      <UpToDateCheckInput Remove="Views\PublicInterface\Register.cshtml" />
+    </ItemGroup>
+</Project>

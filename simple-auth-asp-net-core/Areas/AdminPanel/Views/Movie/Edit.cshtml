@@ -1,0 +1,81 @@
+@model SimpleAuth.ViewModels.Movies.MovieEditVm
+
+<form method="post">
+
+    <div class="container mt-4">
+        <div class="card shadow-lg">
+            <div class="card-header">
+                <h4 class="card-title text-center text-success text-uppercase">Edit Movie</h4>
+            </div>
+            <div class="card-body">
+                <div style="border-top: 4px solid;" class="mb-2 border-success">
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="Title" class="form-label">Title</label>
+                        <input type="text" class="form-control" asp-for="Title" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="ReleasedDate" class="form-label">Released Date</label>
+                        <input type="Date" class="form-control" asp-for="ReleasedDate" required>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="GenreId" class="form-label">Genre</label>
+                        <select asp-for="GenreId" class="form-control" asp-items="@Model.GenreSelectList()">
+                            <option value="">-- SELECT AN GENRE --</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="LanguageId" class="form-label">Language</label>
+                        <select asp-for="LanguageId" class="form-control" asp-items="@Model.LanguageSelectList()">
+                            <option value="">-- SELECT AN LANGUAGE --</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="Poster" class="form-label">Poster</label>
+                        <input type="file" class="form-control" asp-for="Poster" required>
+
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="Trailer" class="form-label">Trailer</label>
+                        <input type="file" class="form-control" asp-for="Trailer" required>
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="col-md-6 mb-3">
+                        <label for="Director" class="form-label">Director</label>
+                        <input type="text" class="form-control" asp-for="Director" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="MovieStatus" class="form-label">Movie Status</label>
+                        <select asp-for="MovieStatus" class="form-control" asp-items="@Model.StatusSelectList()">
+                            <option value="">-- SELECT MOVIE STATUS --</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="Cast" class="form-label">Cast</label>
+                        <input type="text" class="form-control" asp-for="Cast" required>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="card-footer">
+                <div class="col-12 text-center">
+                    <button type="submit" class="btn btn-success w-100">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

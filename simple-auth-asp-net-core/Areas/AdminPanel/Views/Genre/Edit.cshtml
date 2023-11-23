@@ -1,0 +1,34 @@
+@model SimpleAuth.ViewModels.Setup.GenreEditVm
+
+<form method="post">
+
+    <div class="container mt-4">
+        <div class="card shadow-lg">
+            <div class="card-header">
+                <h4 class="card-title text-center text-success text-uppercase">Editing Genre</h4>
+            </div>
+            <div class="card-body">
+                <div style="border-top: 4px solid;" class="mb-2 border-success">
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="Name" class="form-label">Name</label>
+                        <input type="text" class="form-control" asp-for="Name" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="Description" class="form-label">Description</label>
+                        <input type="text" class="form-control" asp-for="Description" required>
+                    </div>
+
+                </div>
+
+
+            </div>
+            <div class="card-footer">
+                <div class="col-12 text-center">
+                    <button type="submit" class="btn btn-success w-100">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
