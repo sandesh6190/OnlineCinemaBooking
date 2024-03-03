@@ -1,0 +1,83 @@
+@model SimpleAuth.ViewModels.Setup.RoomSeatIndexVm
+
+<div class="container-fluid mt-2">
+    <div class="card shadow-lg">
+        <div class="card-header">
+            <div class="d-flex justify-content-between align-items-center">
+                <h4 class="card-title ">List of RoomSeat</h4>
+
+                <a href="/AdminPanel/Room/Index" class="btn btn-success  "><span class="bi bi-backspace"></span>
+                    Back</a>
+            </div>
+        </div>
+
+
+        <div class="card-body">
+            <div style="border-top: 4px solid;" class="mb-2 border-success">
+            </div>
+            <div class="row mb-2">
+                <form action="" class="d-flex align-items-center">
+                    <input class="form-control me-sm-2" type="search" asp-for="Name" placeholder="Search"
+                        autocomplete="off">
+                    <button class="btn btn-success"><i class="bi bi-search"></i></button>
+                </form>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table table-hover table-sm border-1 table-striped">
+                    <thead class="table-success">
+                        <tr>
+                            <th scope="col" width="80px">SN</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Position</th>
+                            <th scope="col">IsLastSeat</th>
+                            <th scope="col">Date Modified</th>
+                            <th scope="col" class="text-end"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table-light">
+                            @{
+                                var sn = 1;
+                                foreach (var RoomSeat in Model.RoomSeats)
+                                {
+                                <tr class="table-light">
+                                    <th scope="row">
+                                            @(sn++)
+                                    </th>
+                                    <td>
+                                            @RoomSeat.Name
+                                    </td>
+                                    <td>
+                                            @RoomSeat.Position
+                                    </td>
+                                    <td>
+                                            @RoomSeat.IsLastSeat
+                                    </td>
+                                    <td>
+                                            @RoomSeat.DateModified
+                                    </td>
+                                        @* <td class="text-end">
+                            <a asp-action="Edit" asp-route-id="@RoomSeat.Id" class="btn btn-primary btn-sm"><i
+                            class="bi bi-pencil-square"></i>
+                            Edit
+                            </a>
+                            <form asp-action="Delete" asp-route-id="@RoomSeat.Id" class="d-inline">
+                            <button type="submit" class="btn btn-danger btn-sm"
+                            onclick="return confirm('Do you really want to delete?')"><i
+                            class="bi bi-trash3"></i>Delete</button>
+                            </form>
+
+                            </td> *@
+                                </tr>
+                                }
+                            }
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+</div>

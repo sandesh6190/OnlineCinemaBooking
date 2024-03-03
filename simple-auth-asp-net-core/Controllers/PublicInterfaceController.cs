@@ -1,9 +1,12 @@
 ﻿using AspNetCoreHero.ToastNotification.Abstractions;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using SimpleAuth.Constants;
 using SimpleAuth.Data;
 using SimpleAuth.Manager.Interfaces;
-using SimpleAuth.ViewModels.Auth;
+using SimpleAuth.ViewModels.Movies;
+using SimpleAuth.ViewModels.PublicInterface;
 
 namespace SimpleAuth.Controllers;
 [AllowAnonymous]
@@ -38,7 +41,7 @@ public class PublicInterfaceController : Controller
         {
             await _authManager.Login(vm.Username, vm.Password);
             _notifyService.Success("LoggedIn Successful");
-            return RedirectToAction("List", "PublicInterface");
+            return RedirectToAction("Index", "PublicInterface");
 
         }
         catch (Exception e)
@@ -50,11 +53,11 @@ public class PublicInterfaceController : Controller
 
     public IActionResult Register()
     {
-        var vm = new RegisterVM();
+        var vm = new RegisterVm();
         return View(vm);
     }
     [HttpPost]
-    public async Task<IActionResult> Register(RegisterVM vm)
+    public async Task<IActionResult> Register(RegisterVm vm)
     {
         if (!ModelState.IsValid)
         {
@@ -81,14 +84,13 @@ public class PublicInterfaceController : Controller
         return RedirectToAction("Index");
     }
 
-    public IActionResult Index()
+    public async Task<IActionResult> Index(MovieIndexVm vm)
     {
 
-        return View();
-    }
-    public IActionResult List()
-    {
-        return View();
+        vm.Movies = await _context.Movies.Where(x => x.MovieStatus == MovieStatusConstants.ComingSoon || x.MovieStatus == MovieStatusConstants.NowShowing).ToListAsync();
+
+        return View(vm);
+
     }
     public IActionResult Contact()
     {

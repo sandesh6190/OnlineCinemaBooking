@@ -829,7 +829,7 @@
       "Microsoft.Win32.SystemEvents/6.0.0": {
         "type": "package",
         "compile": {
-          "lib/net6.0/_._": {
+          "lib/net6.0/Microsoft.Win32.SystemEvents.dll": {
             "related": ".xml"
           }
         },
@@ -873,6 +873,34 @@
           }
         }
       },
+      "Portable.System.DateTimeOnly/7.0.1": {
+        "type": "package",
+        "compile": {
+          "ref/net6.0/Portable.System.DateTimeOnly.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Portable.System.DateTimeOnly.dll": {}
+        }
+      },
+      "Stripe.net/43.6.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.3",
+          "System.Configuration.ConfigurationManager": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/Stripe.net.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Stripe.net.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "System.CodeDom/4.4.0": {
         "type": "package",
         "compile": {
@@ -904,7 +932,7 @@
           "System.Security.Permissions": "6.0.0"
         },
         "compile": {
-          "lib/net6.0/_._": {
+          "lib/net6.0/System.Configuration.ConfigurationManager.dll": {
             "related": ".xml"
           }
         },
@@ -942,7 +970,7 @@
           "Microsoft.Win32.SystemEvents": "6.0.0"
         },
         "compile": {
-          "lib/net6.0/_._": {
+          "lib/net6.0/System.Drawing.Common.dll": {
             "related": ".xml"
           }
         },
@@ -1099,7 +1127,7 @@
       "System.Security.AccessControl/6.0.0": {
         "type": "package",
         "compile": {
-          "lib/net6.0/_._": {
+          "lib/net6.0/System.Security.AccessControl.dll": {
             "related": ".xml"
           }
         },
@@ -1169,7 +1197,7 @@
           "System.Windows.Extensions": "6.0.0"
         },
         "compile": {
-          "lib/net6.0/_._": {
+          "lib/net6.0/System.Security.Permissions.dll": {
             "related": ".xml"
           }
         },
@@ -1299,7 +1327,7 @@
           "System.Drawing.Common": "6.0.0"
         },
         "compile": {
-          "lib/net6.0/_._": {
+          "lib/net6.0/System.Windows.Extensions.dll": {
             "related": ".xml"
           }
         },
@@ -2583,6 +2611,54 @@
         "packageIcon.png"
       ]
     },
+    "Portable.System.DateTimeOnly/7.0.1": {
+      "sha512": "2X7BoEcSLwRJwfrmsNzL+5mhEyENa8YeL2goDdVhjG9lGaRgOGlRRNbfloIpS6FpvMtgYyADouLeFQNRKFNDiQ==",
+      "type": "package",
+      "path": "portable.system.datetimeonly/7.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "icon.png",
+        "lib/net462/Portable.System.DateTimeOnly.dll",
+        "lib/net6.0/Portable.System.DateTimeOnly.dll",
+        "lib/netstandard2.0/Portable.System.DateTimeOnly.dll",
+        "lib/netstandard2.1/Portable.System.DateTimeOnly.dll",
+        "portable.system.datetimeonly.7.0.1.nupkg.sha512",
+        "portable.system.datetimeonly.nuspec",
+        "ref/net462/Portable.System.DateTimeOnly.dll",
+        "ref/net462/Portable.System.DateTimeOnly.xml",
+        "ref/net6.0/Portable.System.DateTimeOnly.dll",
+        "ref/net6.0/Portable.System.DateTimeOnly.xml",
+        "ref/netstandard2.0/Portable.System.DateTimeOnly.dll",
+        "ref/netstandard2.0/Portable.System.DateTimeOnly.xml",
+        "ref/netstandard2.1/Portable.System.DateTimeOnly.dll",
+        "ref/netstandard2.1/Portable.System.DateTimeOnly.xml"
+      ]
+    },
+    "Stripe.net/43.6.0": {
+      "sha512": "nSMRhCFL++/66LOfSaE5oItX6sBZZyJ8KKkpY5UIA5AFvgvKHYW5PXxC48zSlkYdrDpXUfnx6s46MpCyH5sATQ==",
+      "type": "package",
+      "path": "stripe.net/43.6.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "icon.png",
+        "lib/net461/Stripe.net.dll",
+        "lib/net461/Stripe.net.xml",
+        "lib/net5.0/Stripe.net.dll",
+        "lib/net5.0/Stripe.net.xml",
+        "lib/net6.0/Stripe.net.dll",
+        "lib/net6.0/Stripe.net.xml",
+        "lib/netcoreapp3.1/Stripe.net.dll",
+        "lib/netcoreapp3.1/Stripe.net.xml",
+        "lib/netstandard2.0/Stripe.net.dll",
+        "lib/netstandard2.0/Stripe.net.xml",
+        "stripe.net.43.6.0.nupkg.sha512",
+        "stripe.net.nuspec"
+      ]
+    },
     "System.CodeDom/4.4.0": {
       "sha512": "2sCCb7doXEwtYAbqzbF/8UAeDRMNmPaQbU2q50Psg1J9KzumyVVCgKQY8s53WIPTufNT0DpSe9QRvVjOzfDWBA==",
       "type": "package",
@@ -3534,7 +3610,9 @@
       "Microsoft.EntityFrameworkCore.Design >= 7.0.11",
       "Microsoft.EntityFrameworkCore.Relational >= 7.0.11",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.11",
-      "Microsoft.EntityFrameworkCore.Tools >= 7.0.7"
+      "Microsoft.EntityFrameworkCore.Tools >= 7.0.7",
+      "Portable.System.DateTimeOnly >= 7.0.1",
+      "Stripe.net >= 43.6.0"
     ]
   },
   "packageFolders": {
@@ -3543,11 +3621,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Sandesh Limbu\\Desktop\\Authentication\\simple-auth-asp-net-core\\SimpleAuth.csproj",
+      "projectUniqueName": "E:\\BCA 6th sem\\Project\\Online-Cinema-Booking-System\\simple-auth-asp-net-core\\SimpleAuth.csproj",
       "projectName": "SimpleAuth",
-      "projectPath": "C:\\Users\\Sandesh Limbu\\Desktop\\Authentication\\simple-auth-asp-net-core\\SimpleAuth.csproj",
+      "projectPath": "E:\\BCA 6th sem\\Project\\Online-Cinema-Booking-System\\simple-auth-asp-net-core\\SimpleAuth.csproj",
       "packagesPath": "C:\\Users\\Sandesh Limbu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Sandesh Limbu\\Desktop\\Authentication\\simple-auth-asp-net-core\\obj\\",
+      "outputPath": "E:\\BCA 6th sem\\Project\\Online-Cinema-Booking-System\\simple-auth-asp-net-core\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Sandesh Limbu\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3611,6 +3689,14 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[7.0.7, )"
+          },
+          "Portable.System.DateTimeOnly": {
+            "target": "Package",
+            "version": "[7.0.1, )"
+          },
+          "Stripe.net": {
+            "target": "Package",
+            "version": "[43.6.0, )"
           }
         },
         "imports": [

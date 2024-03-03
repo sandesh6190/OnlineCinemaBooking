@@ -67,6 +67,24 @@ ul.contact_info li a,
 	-ms-transition: .5s ease-in;
 }
 
+.aafneiClass
+{
+	background: #02a388;
+	 padding: 4px; 
+	 height: 2.5rem; text-align: center; 
+	 display: flex; 
+	 justify-content:center; 
+	 align-items: center; 
+	 border-radius: 0.5rem;
+
+}
+
+.aafneiClass:hover
+{
+	color: #02a388;
+	background: rgb(249, 243, 243);
+	transition: 1s;
+}
 
 /*--/model--*/
 
@@ -156,6 +174,7 @@ ul.contact_info li a,
 /*-- logo --*/
 
 .navbar-header h1 {
+	padding-left:2rem;
 	font-size: 2em;
 	display: block;
 	text-transform: uppercase;
@@ -214,6 +233,7 @@ ul.nav.navbar-nav.navbar-right {
 	font-weight: 400;
 	text-transform: uppercase;
 	font-family: 'Lato', sans-serif;
+	/* font-family: "Times New Roman", Times, serif; */
 	letter-spacing: 1px;
 	color: #fff;
 }
@@ -964,9 +984,13 @@ i.glyphicon.glyphicon-play-circle {
 	background: rgba(11, 12, 12, 0.96);
 	width: 61px;
 	height: 23px;
+	display: flex;
+	justify-content: start;
+	text-align: left;
 }
 
 .ribben p {
+	
 	font-size: 0.75em;
 	color: #fff;
 	line-height: 0;
@@ -976,7 +1000,7 @@ i.glyphicon.glyphicon-play-circle {
 	content: '';
 	position: absolute;
 	top: 86%;
-	right: 18%;
+	right: 0%;
 	width: 0;
 	height: 0;
 	border-top: 8px solid rgba(11, 12, 12, 0.95);
@@ -3263,6 +3287,9 @@ ul.bottom-links-agile li a {
 		z-index: 999;
 		margin-top: 0.5em;
 		text-align: center!important;
+		/* background-color: #ee1645; */
+		/* position: -webkit-sticky;
+ 		position: sticky; */
 	}
 	.navbar-default .navbar-nav>li>a:before {
 		width: 0;
@@ -3296,6 +3323,7 @@ ul.bottom-links-agile li a {
 	.navbar-default .navbar-collapse,
 	.navbar-default .navbar-form {
 		border: none;
+		
 	}
 	.navbar-nav {
 		background: #0c0d0d;

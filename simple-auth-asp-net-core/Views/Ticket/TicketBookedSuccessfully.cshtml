@@ -1,0 +1,78 @@
+@{
+    Layout = "_EmptyLayout";
+}
+@model SimpleAuth.ViewModels.Tickets.TicketBookedSuccessVm
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online-Cinema-Booking</title>
+
+    <link rel="stylesheet" href="/Ticket/style.css" asp-append-version="true">
+</head>
+
+<body>
+    <div class="Message">
+        <div class="icon"><img src="/Assets/icons/tick.png" alt=""></div>
+        <div
+            style="height: 1rem; text-align: center; display: flex; justify-content:center; align-items: center; flex-direction: row; border-radius: 0.5rem;">
+
+            <h1>You have successfully booked the following Ticket: <a href="/PublicInterface/Index"
+                    style="background: green; color: white; text-decoration: none; padding:0.8rem; border-radius: 0.5rem;">BACK</a>
+            </h1>
+        </div>
+
+    </div>
+    @foreach (var seatName in Model.ShowSeatNames)
+    {
+        <div class="cardWrap">
+
+            <div class="card cardLeft">
+                <h1 style="color: rgba(231, 63, 7, 0.991);;">Cinema<span> Booking</span></h1>
+
+                <hr>
+
+                <div class="title">
+                    <h2>@Model.MovieName</h2>
+                    <span>Movie</span>
+                </div>
+                <div class="name">
+                    <h2>@Model.BookedBy</h2>
+                    <span>BookedBy</span>
+                </div>
+                @* <div class="seat">
+            <h2>@Model.BookedTime.ToString("yyyy-MM-dd")</h2>
+            <span>BookedTime</span>
+            </div> *@
+                <div class="seat">
+                    <h2>@Model.ShowTime</h2>
+                    <span>Show Time</span>
+                </div>
+                <div class="time">
+                    <h2>@Model.PerTicketCost</h2>
+                    <span>Per Ticket</span>
+                </div>
+
+            </div>
+            <div class="card cardRight">
+                <div class="eye"></div>
+                <hr>
+                <div class="number">
+                    <h3>@seatName.SeatName</h3>
+                    <span>seat</span>
+                </div>
+                <div class="barcode"></div>
+            </div>
+
+
+
+        </div>
+    }
+
+
+
+</body>
+
+</html>

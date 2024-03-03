@@ -7,8 +7,8 @@ public class MovieEditVm
 {
     public string Title { get; set; }
     public DateTime ReleasedDate { get; set; }
-    public IFormFile Poster { get; set; }
-    public IFormFile Trailer { get; set; }
+    public IFormFile? Poster { get; set; }
+    public IFormFile? Trailer { get; set; }
     public string Director { get; set; }
     public string Cast { get; set; }
     public string Description { get; set; }

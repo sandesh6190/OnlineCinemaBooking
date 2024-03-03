@@ -9,97 +9,169 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = SimpleAuth
 build_property.RootNamespace = SimpleAuth
-build_property.ProjectDir = C:\Users\Sandesh Limbu\Desktop\Authentication\simple-auth-asp-net-core\
+build_property.ProjectDir = E:\BCA 6th sem\Project\Online-Cinema-Booking-System\simple-auth-asp-net-core\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = true
-build_property.MSBuildProjectDirectory = C:\Users\Sandesh Limbu\Desktop\Authentication\simple-auth-asp-net-core
+build_property.MSBuildProjectDirectory = E:\BCA 6th sem\Project\Online-Cinema-Booking-System\simple-auth-asp-net-core
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Sandesh Limbu/Desktop/Authentication/simple-auth-asp-net-core/Areas/AdminPanel/Views/DashBoard/Index.cshtml]
+[E:/BCA 6th sem/Project/Online-Cinema-Booking-System/simple-auth-asp-net-core/Areas/AdminPanel/Views/DashBoard/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5QYW5lbFxWaWV3c1xEYXNoQm9hcmRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sandesh Limbu/Desktop/Authentication/simple-auth-asp-net-core/Areas/AdminPanel/Views/Genre/Add.cshtml]
+[E:/BCA 6th sem/Project/Online-Cinema-Booking-System/simple-auth-asp-net-core/Areas/AdminPanel/Views/Genre/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5QYW5lbFxWaWV3c1xHZW5yZVxBZGQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sandesh Limbu/Desktop/Authentication/simple-auth-asp-net-core/Areas/AdminPanel/Views/Genre/Edit.cshtml]
+[E:/BCA 6th sem/Project/Online-Cinema-Booking-System/simple-auth-asp-net-core/Areas/AdminPanel/Views/Genre/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5QYW5lbFxWaWV3c1xHZW5yZVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sandesh Limbu/Desktop/Authentication/simple-auth-asp-net-core/Areas/AdminPanel/Views/Genre/Index.cshtml]
+[E:/BCA 6th sem/Project/Online-Cinema-Booking-System/simple-auth-asp-net-core/Areas/AdminPanel/Views/Genre/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5QYW5lbFxWaWV3c1xHZW5yZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sandesh Limbu/Desktop/Authentication/simple-auth-asp-net-core/Areas/AdminPanel/Views/Language/Add.cshtml]
+[E:/BCA 6th sem/Project/Online-Cinema-Booking-System/simple-auth-asp-net-core/Areas/AdminPanel/Views/Language/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5QYW5lbFxWaWV3c1xMYW5ndWFnZVxBZGQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sandesh Limbu/Desktop/Authentication/simple-auth-asp-net-core/Areas/AdminPanel/Views/Language/Edit.cshtml]
+[E:/BCA 6th sem/Project/Online-Cinema-Booking-System/simple-auth-asp-net-core/Areas/AdminPanel/Views/Language/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5QYW5lbFxWaWV3c1xMYW5ndWFnZVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sandesh Limbu/Desktop/Authentication/simple-auth-asp-net-core/Areas/AdminPanel/Views/Language/Index.cshtml]
+[E:/BCA 6th sem/Project/Online-Cinema-Booking-System/simple-auth-asp-net-core/Areas/AdminPanel/Views/Language/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5QYW5lbFxWaWV3c1xMYW5ndWFnZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sandesh Limbu/Desktop/Authentication/simple-auth-asp-net-core/Areas/AdminPanel/Views/Movie/Add.cshtml]
+[E:/BCA 6th sem/Project/Online-Cinema-Booking-System/simple-auth-asp-net-core/Areas/AdminPanel/Views/Movie/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5QYW5lbFxWaWV3c1xNb3ZpZVxBZGQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sandesh Limbu/Desktop/Authentication/simple-auth-asp-net-core/Areas/AdminPanel/Views/Movie/Edit.cshtml]
+[E:/BCA 6th sem/Project/Online-Cinema-Booking-System/simple-auth-asp-net-core/Areas/AdminPanel/Views/Movie/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5QYW5lbFxWaWV3c1xNb3ZpZVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sandesh Limbu/Desktop/Authentication/simple-auth-asp-net-core/Areas/AdminPanel/Views/Movie/Index.cshtml]
+[E:/BCA 6th sem/Project/Online-Cinema-Booking-System/simple-auth-asp-net-core/Areas/AdminPanel/Views/Movie/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5QYW5lbFxWaWV3c1xNb3ZpZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sandesh Limbu/Desktop/Authentication/simple-auth-asp-net-core/Areas/AdminPanel/Views/_ViewImports.cshtml]
+[E:/BCA 6th sem/Project/Online-Cinema-Booking-System/simple-auth-asp-net-core/Areas/AdminPanel/Views/RoomSeat/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5QYW5lbFxWaWV3c1xSb29tU2VhdFxBZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/BCA 6th sem/Project/Online-Cinema-Booking-System/simple-auth-asp-net-core/Areas/AdminPanel/Views/RoomSeat/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5QYW5lbFxWaWV3c1xSb29tU2VhdFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/BCA 6th sem/Project/Online-Cinema-Booking-System/simple-auth-asp-net-core/Areas/AdminPanel/Views/RoomSeat/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5QYW5lbFxWaWV3c1xSb29tU2VhdFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/BCA 6th sem/Project/Online-Cinema-Booking-System/simple-auth-asp-net-core/Areas/AdminPanel/Views/Room/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5QYW5lbFxWaWV3c1xSb29tXEFkZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/BCA 6th sem/Project/Online-Cinema-Booking-System/simple-auth-asp-net-core/Areas/AdminPanel/Views/Room/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5QYW5lbFxWaWV3c1xSb29tXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/BCA 6th sem/Project/Online-Cinema-Booking-System/simple-auth-asp-net-core/Areas/AdminPanel/Views/Room/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5QYW5lbFxWaWV3c1xSb29tXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/BCA 6th sem/Project/Online-Cinema-Booking-System/simple-auth-asp-net-core/Areas/AdminPanel/Views/ShowSeat/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5QYW5lbFxWaWV3c1xTaG93U2VhdFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/BCA 6th sem/Project/Online-Cinema-Booking-System/simple-auth-asp-net-core/Areas/AdminPanel/Views/Show/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5QYW5lbFxWaWV3c1xTaG93XEFkZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/BCA 6th sem/Project/Online-Cinema-Booking-System/simple-auth-asp-net-core/Areas/AdminPanel/Views/Show/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5QYW5lbFxWaWV3c1xTaG93XEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/BCA 6th sem/Project/Online-Cinema-Booking-System/simple-auth-asp-net-core/Areas/AdminPanel/Views/Show/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5QYW5lbFxWaWV3c1xTaG93XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/BCA 6th sem/Project/Online-Cinema-Booking-System/simple-auth-asp-net-core/Areas/AdminPanel/Views/TicketSeat/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5QYW5lbFxWaWV3c1xUaWNrZXRTZWF0XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/BCA 6th sem/Project/Online-Cinema-Booking-System/simple-auth-asp-net-core/Areas/AdminPanel/Views/Ticket/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5QYW5lbFxWaWV3c1xUaWNrZXRcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/BCA 6th sem/Project/Online-Cinema-Booking-System/simple-auth-asp-net-core/Areas/AdminPanel/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5QYW5lbFxWaWV3c1xfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sandesh Limbu/Desktop/Authentication/simple-auth-asp-net-core/Areas/AdminPanel/Views/_ViewStart.cshtml]
+[E:/BCA 6th sem/Project/Online-Cinema-Booking-System/simple-auth-asp-net-core/Areas/AdminPanel/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5QYW5lbFxWaWV3c1xfVmlld1N0YXJ0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sandesh Limbu/Desktop/Authentication/simple-auth-asp-net-core/Views/Auth/Login.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxMb2dpbi5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Sandesh Limbu/Desktop/Authentication/simple-auth-asp-net-core/Views/Home/Index.cshtml]
+[E:/BCA 6th sem/Project/Online-Cinema-Booking-System/simple-auth-asp-net-core/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sandesh Limbu/Desktop/Authentication/simple-auth-asp-net-core/Views/Home/Privacy.cshtml]
+[E:/BCA 6th sem/Project/Online-Cinema-Booking-System/simple-auth-asp-net-core/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sandesh Limbu/Desktop/Authentication/simple-auth-asp-net-core/Views/Shared/Error.cshtml]
+[E:/BCA 6th sem/Project/Online-Cinema-Booking-System/simple-auth-asp-net-core/Views/MovieList/ComingSoon.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aWVMaXN0XENvbWluZ1Nvb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/BCA 6th sem/Project/Online-Cinema-Booking-System/simple-auth-asp-net-core/Views/MovieList/NowShowing.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aWVMaXN0XE5vd1Nob3dpbmcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/BCA 6th sem/Project/Online-Cinema-Booking-System/simple-auth-asp-net-core/Views/MovieShow/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aWVTaG93XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/BCA 6th sem/Project/Online-Cinema-Booking-System/simple-auth-asp-net-core/Views/MovieShow/MovieShowSeats.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aWVTaG93XE1vdmllU2hvd1NlYXRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/BCA 6th sem/Project/Online-Cinema-Booking-System/simple-auth-asp-net-core/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sandesh Limbu/Desktop/Authentication/simple-auth-asp-net-core/Views/Shared/_EmptyLayout.cshtml]
+[E:/BCA 6th sem/Project/Online-Cinema-Booking-System/simple-auth-asp-net-core/Views/Shared/_AdminPanelLoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZG1pblBhbmVsTG9naW5QYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/BCA 6th sem/Project/Online-Cinema-Booking-System/simple-auth-asp-net-core/Views/Shared/_EmptyLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9FbXB0eUxheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sandesh Limbu/Desktop/Authentication/simple-auth-asp-net-core/Views/Shared/_LoginPartial.cshtml]
+[E:/BCA 6th sem/Project/Online-Cinema-Booking-System/simple-auth-asp-net-core/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sandesh Limbu/Desktop/Authentication/simple-auth-asp-net-core/Views/Shared/_ValidationScriptsPartial.cshtml]
+[E:/BCA 6th sem/Project/Online-Cinema-Booking-System/simple-auth-asp-net-core/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sandesh Limbu/Desktop/Authentication/simple-auth-asp-net-core/Views/_ViewImports.cshtml]
+[E:/BCA 6th sem/Project/Online-Cinema-Booking-System/simple-auth-asp-net-core/Views/Ticket/TicketBookedSuccessfully.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlja2V0XFRpY2tldEJvb2tlZFN1Y2Nlc3NmdWxseS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/BCA 6th sem/Project/Online-Cinema-Booking-System/simple-auth-asp-net-core/Views/Ticket/TicketBookFailed.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlja2V0XFRpY2tldEJvb2tGYWlsZWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/BCA 6th sem/Project/Online-Cinema-Booking-System/simple-auth-asp-net-core/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sandesh Limbu/Desktop/Authentication/simple-auth-asp-net-core/Views/_ViewStart.cshtml]
+[E:/BCA 6th sem/Project/Online-Cinema-Booking-System/simple-auth-asp-net-core/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Sandesh Limbu/Desktop/Authentication/simple-auth-asp-net-core/Views/Shared/_Layout.cshtml]
+[E:/BCA 6th sem/Project/Online-Cinema-Booking-System/simple-auth-asp-net-core/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-g452s6r256

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jpMlIgxgGJRs/9wUvJco32HL3dLb3/Er9ZOXd1PkkTxJmx40vsC2v89ZUP5nrJBrMynnKDKJrbaXatNrlOucoA==",
+  "dgSpecHash": "vrn9Fbu+RwqIya11UGpVnsod6mzV5+Iadq1cMBrhbBj5GarPoFgLB84Z+ma/r7IxFLwgIZY4Md8UcXdpBzJhBA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Sandesh Limbu\\Desktop\\Authentication\\simple-auth-asp-net-core\\SimpleAuth.csproj",
+  "projectFilePath": "E:\\BCA 6th sem\\Project\\Online-Cinema-Booking-System\\simple-auth-asp-net-core\\SimpleAuth.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Sandesh Limbu\\.nuget\\packages\\aspnetcorehero.toastnotification\\1.1.0\\aspnetcorehero.toastnotification.1.1.0.nupkg.sha512",
     "C:\\Users\\Sandesh Limbu\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
@@ -51,6 +51,8 @@
     "C:\\Users\\Sandesh Limbu\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\Sandesh Limbu\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
     "C:\\Users\\Sandesh Limbu\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\Sandesh Limbu\\.nuget\\packages\\portable.system.datetimeonly\\7.0.1\\portable.system.datetimeonly.7.0.1.nupkg.sha512",
+    "C:\\Users\\Sandesh Limbu\\.nuget\\packages\\stripe.net\\43.6.0\\stripe.net.43.6.0.nupkg.sha512",
     "C:\\Users\\Sandesh Limbu\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
     "C:\\Users\\Sandesh Limbu\\.nuget\\packages\\system.collections.immutable\\5.0.0\\system.collections.immutable.5.0.0.nupkg.sha512",
     "C:\\Users\\Sandesh Limbu\\.nuget\\packages\\system.configuration.configurationmanager\\6.0.1\\system.configuration.configurationmanager.6.0.1.nupkg.sha512",

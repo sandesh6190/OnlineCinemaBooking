@@ -1,0 +1,118 @@
+@model SimpleAuth.ViewModels.Shows.ShowIndexVm
+
+<div class="container-fluid mt-2">
+    <div class="card shadow-lg">
+        <div class="card-header">
+            <div class="d-flex justify-content-between align-items-center">
+                <h4 class="card-title ">List of Shows</h4>
+
+                <a href="/AdminPanel/Show/Add" class="btn btn-success "><span class="bi bi-file-plus"></span> Add
+                    Show</a>
+            </div>
+        </div>
+
+
+        <div class="card-body">
+            <div style="border-top: 4px solid;" class="mb-2 border-success">
+            </div>
+            <div class="row mb-2">
+                <form action="" class="d-flex align-items-center">
+                    <select asp-for="SearchShowStatus" class="form-control"
+                        asp-items="@Model.SearchShowStatusSelectList()">
+                        <option value="">-- SELECT AN STATUS --</option>
+                    </select>
+                    <select asp-for="SearchMovieId" class="form-control" asp-items="@Model.SearchMovieSelectList()">
+                        <option value="">-- SELECT A MOVIE --</option>
+                    </select>
+                    <select asp-for="SearchRoomId" class="form-control" asp-items="@Model.SearchRoomSelectList()">
+                        <option value="">-- SELECT A ROOM --</option>
+                    </select>
+                    <input class="form-control me-sm-2" type="Date" asp-for="SearchShowTime" placeholder="Show Time"
+                        autocomplete="off">
+                    <button class="btn btn-success"><i class="bi bi-search"></i></button>
+
+                </form>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table table-hover table-sm border-1 table-striped">
+                    <thead class="table-success">
+                        <tr>
+                            <th scope="col" width="40px">SN</th>
+                            <th scope="col">Movie</th>
+                            <th scope="col">Hall Name</th>
+                            <th scope="col">Show Time</th>
+                            <th scope="col">Cost</th>
+                            @* <th scope="col">Poster</th> *@
+                            <th scope="col">Status</th>
+                            @* <th scope="col">Trailer</th> *@
+                            <th scope="col">Date Modified</th>
+                            <th scope="col" class="text-end"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table-light">
+                            @{
+                                var sn = 1;
+                                foreach (var Show in Model.Shows)
+                                {
+                                <tr class="table-light">
+                                    <th scope="row">
+                                            @(sn++)
+                                    </th>
+                                    <td style="text-align: center;        display:flex; justify-content: start;
+                                                                   align-items: center; flex-direction: column">
+                                        <img style="height: 8vh; width: 2vw;" src="/Uploads/Poster/@Show.Movies.Poster"
+                                            class="w-50" />@Show.Movies.Title
+                                    </td>
+                                    <td>
+                                            @Show.Rooms.Name
+                                    </td>
+                                    <td>
+                                            @Show.ShowTime
+                                    </td>
+                                    <td>
+                                            @Show.Cost
+                                    </td>
+                                        @* <td>
+                            <img class="img img-thumbnail" src="/Uploads/Poster/@Show.Movies.Poster"
+                            style="height:10% width:20%" />
+                            </td> *@
+                                    <td>
+                                            @Show.ShowStatus
+                                    </td>
+                                        @* <td>
+                            <img src="/Uploads/Trailer/@Show.Movies.Trailer" />
+                            </td> *@
+                                    <td>
+                                            @Show.DateModified
+                                    </td>
+                                    <td class="text-end">
+                                        <a asp-action="Edit" asp-route-id="@Show.Id" class="btn btn-primary btn-sm"><i
+                                                class="bi bi-pencil-square"></i>
+                                            Edit
+                                        </a>
+
+                                        <form asp-action="Delete" asp-route-id="@Show.Id" class="d-inline">
+                                            <button type="submit" class="btn btn-danger btn-sm"
+                                                onclick="return confirm('Do you really want to delete?')"><i
+                                                    class="bi bi-trash"></i> Delete</button>
+                                        </form>
+                                        <a asp-controller="ShowSeat" asp-action="Index" asp-route-id="@Show.Id"
+                                            class="btn btn-success btn-sm"><i class="bi bi-eye"></i>
+                                            View ShowSeat
+                                        </a>
+
+                                    </td>
+                                </tr>
+                                }
+                            }
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+</div>

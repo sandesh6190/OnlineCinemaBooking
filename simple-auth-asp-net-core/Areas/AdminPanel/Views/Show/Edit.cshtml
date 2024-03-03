@@ -1,0 +1,55 @@
+@model SimpleAuth.ViewModels.Shows.ShowEditVm
+
+<form method="post" enctype="multipart/form-data">
+
+    <div class="container mt-4">
+        <div class="card shadow-lg">
+            <div class="card-header">
+                <h4 class="card-title text-center text-success text-uppercase">Edit Show</h4>
+            </div>
+            <div class="card-body">
+                <div style="border-top: 4px solid;" class="mb-2 border-success">
+                </div>
+                <div asp-validation-summary="All"></div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="MovieId" class="form-label">Movie</label>
+                        <select asp-for="MovieId" class="form-control" asp-items="@Model.MovieSelectList()">
+                            <option value="">-- SELECT A MOVIE --</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="RoomId" class="form-label">Room</label>
+                        <select asp-for="RoomId" class="form-control" asp-items="@Model.RoomSelectList()">
+                            <option value="">-- SELECT A ROOM --</option>
+                        </select>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="SearchShowStatus" class="form-label">Show Status</label>
+                        <select asp-for="ShowStatus" class="form-control" asp-items="@Model.ShowStatusSelectList()">
+                            <option value="">-- SELECT AN STATUS --</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="ShowTime" class="form-label">Show Time</label>
+                        <input type="datetime-local" class="form-control" asp-for="ShowTime" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="Cost" class="form-label">Cost</label>
+                        <input type="number" class="form-control" asp-for="Cost" required>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="col-12 text-center">
+                    <button type="submit" class="btn btn-success w-100">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

@@ -20,10 +20,10 @@
                     <input class="form-control me-sm-2" type="search" asp-for="Search" placeholder="Search"
                         autocomplete="off">
                     <select asp-for="SearchStatus" class="form-control" asp-items="@Model.SearchStatusSelectList()">
-                        <option value="">-- SELECT AN MOVIE STATUS --</option>
+                        <option value="">-- SELECT A MOVIE STATUS --</option>
                     </select>
                     <select asp-for="SearchGenreId" class="form-control" asp-items="@Model.SearchGenreSelectList()">
-                        <option value="">-- SELECT AN GENRE --</option>
+                        <option value="">-- SELECT A GENRE --</option>
                     </select>
                     <input class="form-control me-sm-2" type="Date" asp-for="SearchReleasedDate"
                         placeholder="Released Date" autocomplete="off">
@@ -38,16 +38,16 @@
                         <tr>
                             <th scope="col" width="40px">SN</th>
                             <th scope="col">Title</th>
-                            <th scope="col">Released Date</th>
+                            <th scope="col">Released On</th>
                             <th scope="col">Language</th>
                             <th scope="col">Genre</th>
                             <th scope="col">Director</th>
                             <th scope="col">Cast</th>
-                            <th scope="col">Description</th>
+                            @* <th scope="col">Description</th> *@
                             <th scope="col">Status</th>
-                            <th scope="col">Poster</th>
-                            <th scope="col">Trailer</th>
-                            <th scope="col">Date Modified</th>
+                            @* <th scope="col">Poster</th> *@
+                            @* <th scope="col">Trailer</th> *@
+                            @* <th scope="col">Date Modified</th> *@
                             <th scope="col" class="text-end"></th>
                         </tr>
                     </thead>
@@ -61,11 +61,16 @@
                                     <th scope="row">
                                             @(sn++)
                                     </th>
-                                    <td>
-                                            @movie.Title
+                                    <td style="text-align: center;
+                                                            display:flex; justify-content:start;
+                                                            align-items: center; flex-direction: column"><img style="height: 8vh;
+                                                                                      width: 2vw;" class="w-50"
+                                            alt="description" src="/Uploads/Poster/@movie.Poster" />@movie.Title
+
                                     </td>
                                     <td>
-                                            @movie.ReleasedDate
+                                            @movie.ReleasedDate.ToString("MM/dd/yyyy")
+
                                     </td>
                                     <td>
                                             @movie.Languages.Name
@@ -79,26 +84,22 @@
                                     <td>
                                             @movie.Cast
                                     </td>
-                                    <td>
-                                            @movie.Description
-                                    </td>
+                                        @* <td>
+                            @movie.Description
+                            </td> *@
                                     <td>
                                             @movie.MovieStatus
                                     </td>
-                                    <td>
-                                            @* <button class="imgButton"
-                                style="background-image: url( '/Uploads/Poster/@movie.Poster' ); border: 2px solid red;
-                                transform: rotate(180deg);">
-                                </button> *@
-                                        <img class="img img-thumbnail" src="/Uploads/Poster/@movie.Poster"
-                                            style="height:10% width:20%" />
-                                    </td>
-                                    <td>
-                                        <img src="/Uploads/Trailer/@movie.Trailer" />
-                                    </td>
-                                    <td>
-                                            @movie.DateModified
-                                    </td>
+                                        @* <button class="imgButton"
+                            style="background-image: url( '/Uploads/Poster/@movie.Poster' ); border: 2px solid red;
+                            transform: rotate(180deg);">
+                            </button> *@
+                                        @* <td>
+                            <img src="/Uploads/Trailer/@movie.Trailer" />
+                            </td> *@
+                                        @* <td>
+                            @movie.DateModified
+                            </td> *@
                                     <td class="text-end">
                                         <a asp-action="Edit" asp-route-id="@movie.Id" class="btn btn-primary btn-sm"><i
                                                 class="bi bi-pencil-square"></i>
@@ -107,7 +108,7 @@
                                         <form asp-action="Delete" asp-route-id="@movie.Id" class="d-inline">
                                             <button type="submit" class="btn btn-danger btn-sm"
                                                 onclick="return confirm('Do you really want to delete?')"><i
-                                                    class="bi bi-trash3"></i>Delete</button>
+                                                    class="bi bi-trash"></i> Delete</button>
                                         </form>
 
                                     </td>

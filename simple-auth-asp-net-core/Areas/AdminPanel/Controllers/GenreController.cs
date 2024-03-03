@@ -1,5 +1,6 @@
 ﻿using System.Transactions;
 using AspNetCoreHero.ToastNotification.Abstractions;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
@@ -9,6 +10,7 @@ using SimpleAuth.ViewModels.Setup;
 
 namespace SimpleAuth.AdminPanel.Controllers;
 [Area("AdminPanel")]
+[Authorize(Roles = "Admin")]
 public class GenreController : Controller
 {
     private readonly ApplicationDbContext _context;
@@ -25,7 +27,6 @@ public class GenreController : Controller
             //.Include(x => x.Employees) // To Get Employee data automatically
             .ToListAsync();
         return View(vm);
-
 
         //Second Option
         // vm.DisplayData = await _context.Products

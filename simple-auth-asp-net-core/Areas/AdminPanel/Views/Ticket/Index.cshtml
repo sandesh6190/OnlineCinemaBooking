@@ -1,0 +1,132 @@
+@model SimpleAuth.ViewModels.TicketAdminPanel.TicketAdminIndexVm
+
+<div class="container-fluid mt-2">
+    <div class="card shadow-lg">
+        <div class="card-header">
+            <div class="d-flex justify-content-between align-items-center">
+                <h4 class="card-title ">List of Tickets</h4>
+
+                @* <a href="/AdminPanel/Ticket/Add" class="btn btn-success "><span class="bi bi-file-plus"></span> Add
+                Ticket</a> *@
+            </div>
+        </div>
+
+
+        <div class="card-body">
+            <div style="border-top: 4px solid;" class="mb-2 border-success">
+            </div>
+            <div class="row mb-2">
+                <form action="" class="d-flex align-items-center">
+                    @* <input class="form-control me-sm-2" type="search" asp-for="Search" placeholder="Search"
+                    autocomplete="off">
+                    <select asp-for="SearchStatus" class="form-control" asp-items="@Model.SearchStatusSelectList()">
+                    <option value="">-- SELECT AN Ticket STATUS --</option>
+                    </select> *@
+                    <select asp-for="SearchByMovieId" class="form-control" asp-items="@Model.SearchByMovieSelectList()">
+                        <option value="">-- SELECT A MOVIE --</option>
+                    </select>
+                    @* <input class="form-control me-sm-2" type="Date" asp-for="SearchReleasedDate"
+                    placeholder="Released Date" autocomplete="off"> *@
+                    <button class="btn btn-success"><i class="bi bi-search"></i></button>
+
+                </form>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table table-hover table-sm border-1 table-striped">
+                    <thead class="table-success">
+                        <tr>
+                            <th scope="col" width="40px">SN</th>
+                            <th scope="col">TicketId</th>
+                            <th scope="col">Movie</th>
+                            <th scope="col">BookedBy</th>
+                            <th scope="col">BookedTime</th>
+
+                            @* <th scope="col">Director</th>
+                            <th scope="col">Cast</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Status</th>
+                            @* <th scope="col">Poster</th> *@
+                            @* <th scope="col">Trailer</th>
+                            <th scope="col">Date Modified</th> *@
+                            <th scope="col" class="text-end"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table-light">
+                            @{
+                                var sn = 1;
+                                foreach (var Ticket in Model.Tickets)
+                                {
+                                <tr class="table-light">
+                                    <th scope="row">
+                                            @(sn++)
+                                    </th>
+                                        @* <td><img class="w-50" alt="description" src="/Uploads/Poster/@Ticket.Poster"
+                            style="height:0.5cm width: 0.5cm" /><span>@Ticket.Title</span>
+
+                            </td> *@
+                                    <td>
+                                            @Ticket.Id
+                                    </td>
+                                    <td>
+                                            @Ticket.Shows.Movies.Title
+                                    </td>
+                                    <td>
+                                            @Ticket.BookedBy
+                                    </td>
+                                    <td>
+                                            @Ticket.BookedTime
+
+                                    </td>
+                                    <td>
+                                        <a asp-controller="TicketSeat" asp-action="Index" asp-route-id="@Ticket.Id"
+                                            class="btn btn-success btn-sm"><i class="bi bi-eye"></i>
+                                            View Seats
+                                        </a>
+                                    </td>
+
+
+                                        @* <td>
+                            @Ticket.Cast
+                            </td>
+                            <td>
+                            @Ticket.Description
+                            </td>
+                            <td>
+                            @Ticket.TicketStatus
+                            </td> *@
+                                        @* <button class="imgButton"
+                            style="background-image: url( '/Uploads/Poster/@Ticket.Poster' ); border: 2px solid red;
+                            transform: rotate(180deg);">
+                            </button> *@
+                                        @* <td>
+                            <img src="/Uploads/Trailer/@Ticket.Trailer" />
+                            </td> *@
+                                        @* <td>
+                            @Ticket.DateModified
+                            </td>
+                            <td class="text-end">
+                            <a asp-action="Edit" asp-route-id="@Ticket.Id" class="btn btn-primary btn-sm"><i
+                            class="bi bi-pencil-square"></i>
+                            Edit
+                            </a>
+                            <form asp-action="Delete" asp-route-id="@Ticket.Id" class="d-inline">
+                            <button type="submit" class="btn btn-danger btn-sm"
+                            onclick="return confirm('Do you really want to delete?')"><i
+                            class="bi bi-trash3"></i>Delete</button>
+                            </form>
+
+                            </td> *@
+                                </tr>
+                                }
+                            }
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+</div>

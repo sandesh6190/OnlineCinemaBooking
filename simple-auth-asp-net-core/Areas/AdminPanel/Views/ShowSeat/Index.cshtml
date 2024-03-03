@@ -1,0 +1,92 @@
+@model SimpleAuth.ViewModels.ShowSeats.ShowSeatIndexVm
+
+<div class="container-fluid mt-2">
+    <div class="card shadow-lg">
+        <div class="card-header">
+            <div class="d-flex justify-content-between align-items-center">
+                <h4 class="card-title ">List of ShowSeat</h4>
+
+                <a href="/AdminPanel/Show/Index" class="btn btn-success  "><span class="bi bi-backspace"></span>
+                    Back</a>
+            </div>
+        </div>
+
+
+        <div class="card-body">
+            <div style="border-top: 4px solid;" class="mb-2 border-success">
+            </div>
+            <div class="row mb-2">
+                <form action="" class="d-flex align-items-center">
+                    <input class="form-control me-sm-2" type="search" asp-for="SeatName" placeholder="Search"
+                        autocomplete="off">
+                    <select asp-for="SearchByShowSeatStatus" class="form-control"
+                        asp-items="@Model.SearchByShowSeatStatusSelectList()">
+                        <option value="">-- SELECT AN SEAT STATUS --</option>
+                    </select>
+                    <button class="btn btn-success"><i class="bi bi-search"></i></button>
+
+                </form>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table table-hover table-sm border-1 table-striped">
+                    <thead class="table-success">
+                        <tr>
+                            <th scope="col" width="80px">SN</th>
+                            <th scope="col">Seat Name</th>
+                            <th scope="col">Position</th>
+                            <th scope="col">IsLastSeatInRow</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Booked By</th>
+                            <th scope="col" class="text-end"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table-light">
+                            @{
+                                var sn = 1;
+                                foreach (var ShowSeat in Model.ShowSeats)
+                                {
+                                <tr class="table-light">
+                                    <th scope="row">
+                                            @(sn++)
+                                    </th>
+                                    <td>
+                                            @ShowSeat.SeatName
+                                    </td>
+                                    <td>
+                                            @ShowSeat.Position
+                                    </td>
+                                    <td>
+                                            @ShowSeat.IsLastSeatInRow
+                                    </td>
+                                    <td>
+                                            @ShowSeat.SeatStatus
+                                    </td>
+                                    <td>
+                                            @ShowSeat.BookedByPerson
+                                    </td>
+                                        @* <td class="text-end">
+                            <a asp-action="Edit" asp-route-id="@ShowSeat.Id" class="btn btn-primary btn-sm"><i
+                            class="bi bi-pencil-square"></i>
+                            Edit
+                            </a>
+                            <form asp-action="Delete" asp-route-id="@ShowSeat.Id" class="d-inline">
+                            <button type="submit" class="btn btn-danger btn-sm"
+                            onclick="return confirm('Do you really want to delete?')"><i
+                            class="bi bi-trash3"></i>Delete</button>
+                            </form>
+
+                            </td> *@
+                                </tr>
+                                }
+                            }
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+</div>

@@ -1,6 +1,6 @@
 @model SimpleAuth.ViewModels.Movies.MovieEditVm
 
-<form method="post">
+<form method="post" enctype="multipart/form-data">
 
     <div class="container mt-4">
         <div class="card shadow-lg">
@@ -8,6 +8,7 @@
                 <h4 class="card-title text-center text-success text-uppercase">Edit Movie</h4>
             </div>
             <div class="card-body">
+                <div asp-validation-summary="All"></div>
                 <div style="border-top: 4px solid;" class="mb-2 border-success">
                 </div>
                 <div class="row">
@@ -25,13 +26,13 @@
                     <div class="col-md-6 mb-3">
                         <label for="GenreId" class="form-label">Genre</label>
                         <select asp-for="GenreId" class="form-control" asp-items="@Model.GenreSelectList()">
-                            <option value="">-- SELECT AN GENRE --</option>
+                            <option value="">-- SELECT A GENRE --</option>
                         </select>
                     </div>
                     <div class="col-md-6 mb-3">
                         <label for="LanguageId" class="form-label">Language</label>
                         <select asp-for="LanguageId" class="form-control" asp-items="@Model.LanguageSelectList()">
-                            <option value="">-- SELECT AN LANGUAGE --</option>
+                            <option value="">-- SELECT A LANGUAGE --</option>
                         </select>
                     </div>
                 </div>
@@ -39,12 +40,12 @@
                 <div class="row">
                     <div class="col-md-6 mb-3">
                         <label for="Poster" class="form-label">Poster</label>
-                        <input type="file" class="form-control" asp-for="Poster" required>
+                        <input type="file" class="form-control" asp-for="Poster">
 
                     </div>
                     <div class="col-md-6 mb-3">
                         <label for="Trailer" class="form-label">Trailer</label>
-                        <input type="file" class="form-control" asp-for="Trailer" required>
+                        <input type="file" class="form-control" asp-for="Trailer">
                     </div>
                 </div>
 
@@ -66,6 +67,11 @@
                     <div class="col-md-6 mb-3">
                         <label for="Cast" class="form-label">Cast</label>
                         <input type="text" class="form-control" asp-for="Cast" required>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label for="Description" class="form-label">Description</label>
+                        <input type="text" class="form-control" asp-for="Description" required>
                     </div>
 
                 </div>

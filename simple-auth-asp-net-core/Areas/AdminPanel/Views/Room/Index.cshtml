@@ -1,0 +1,88 @@
+@model SimpleAuth.ViewModels.Setup.RoomIndexVm
+
+<div class="container-fluid mt-2">
+    <div class="card shadow-lg">
+        <div class="card-header">
+            <div class="d-flex justify-content-between align-items-center">
+                <h4 class="card-title ">List of Rooms</h4>
+
+                <a href="/AdminPanel/Room/Add" class="btn btn-success "><span class="bi bi-file-plus"></span> Add
+                    Room</a>
+            </div>
+        </div>
+
+
+        <div class="card-body">
+            <div style="border-top: 4px solid;" class="mb-2 border-success">
+            </div>
+            <div class="row mb-2">
+                <form action="" class="d-flex align-items-center">
+                    <input class="form-control me-sm-2" type="search" asp-for="Name" placeholder="Search"
+                        autocomplete="off">
+                    <button class="btn btn-success"><i class="bi bi-search"></i></button>
+                </form>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table table-hover table-sm border-1 table-striped">
+                    <thead class="table-success">
+                        <tr>
+                            <th scope="col" width="80px">SN</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Total Rows </th>
+                            <th scope="col">Total Columns </th>
+                            <th scope="col">Date Modified</th>
+                            <th scope="col" class="text-end"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table-light">
+                            @{
+                                var sn = 1;
+                                foreach (var room in Model.Rooms)
+                                {
+                                <tr class="table-light">
+                                    <th scope="row">
+                                            @(sn++)
+                                    </th>
+                                    <td>
+                                            @room.Name
+                                    </td>
+                                    <td>
+                                            @room.TotalRows
+                                    </td>
+                                    <td>
+                                            @room.TotalColumns
+                                    </td>
+                                    <td>
+                                            @room.DateModified
+                                    </td>
+                                    <td class="text-end">
+                                        <a asp-action="Edit" asp-route-id="@room.Id" class="btn btn-primary btn-sm"><i
+                                                class="bi bi-pencil-square"></i>
+                                            Edit
+                                        </a>
+                                        <form asp-action="Delete" asp-route-id="@room.Id" class="d-inline">
+                                            <button type="submit" class="btn btn-danger btn-sm"
+                                                onclick="return confirm('Do you really want to delete?')"><i
+                                                    class="bi bi-trash"></i> Delete</button>
+                                        </form>
+                                        <a asp-controller="RoomSeat" asp-action="Index" asp-route-id="@room.Id"
+                                            class="btn btn-success btn-sm"><i class="bi bi-eye"></i>
+                                            View Seats
+                                        </a>
+
+
+                                    </td>
+                                </tr>
+                                }
+                            }
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+</div>

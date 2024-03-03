@@ -5,12 +5,43 @@
 }
 @if (_CurrentUserProvider.IsLoggedIn())
 {
-    <div class="d-flex gap-2 align-items-center justify-content-center">
-        <span>
-            Logged in as @currentUser.Name
-        </span>
-        <a asp-controller="Auth" asp-action="Logout" class="btn btn-danger">
-            Logout
-        </a>
-    </div>
+
+    @* <div class="d-flex gap-2 align-items-center justify-content-center"> *@
+    <li><span style="">
+            <p style="color: rgb(236, 239, 238); font-variant: small-caps;">Logged in as</p>
+            <p style="color: rgb(17, 208, 218);"> @currentUser.Name</p>
+        </span></li>
+
+    <li><a asp-controller="PublicInterface" asp-action="Logout" class="btn btn-danger my-2" style="border-radius: 0.5rem">
+            <span style="font-variant: small-caps; font-size: small;">Logout</span>
+        </a></li>
+    @if (currentUser.UserType == SimpleAuth.Constants.UserTypeConstants.Admin)
+    {
+        <li>
+            <div class="aafneiClass">
+                <span>
+                    <a href="/AdminPanel/DashBoard/Index"
+                        style="font-variant: small-caps; color: white; font-size: small; text-decoration: none;    ">AdminPanel</a>
+                </span>
+            </div>
+
+        </li>
+
+    }
+    @* </div> *@
+}
+else
+{
+    <li><a href="#" class="login" data-toggle="modal" data-target="#myModal4">Sign
+            In</a>
+    </li>
+
+    <li><a href="#" class="login reg" data-toggle="modal" data-target="#myModal5">Sign
+            Up</a></li>
+    @* <li class="nav-item">
+<a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Register">Register</a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Login">Login</a>
+</li> *@
 }

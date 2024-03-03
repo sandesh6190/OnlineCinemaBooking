@@ -1,0 +1,136 @@
+@using SimpleAuth.Provider.Interfaces
+@{
+    var movie = Model.Movie;
+}
+
+<div class="showSeatsBody">
+    <div class="movie-container">
+        @* <label>Pick a movie:</label>*@
+
+        <select class="d-none" id="movie">
+
+            <option value="10">Avengers: Endgame ($10)</option>
+            <option value="12">Joker ($12)</option>
+            <option value="8">Toy Story 4 ($8)</option>
+            <option value="9">The Lion King ($9)</option>
+        </select>
+        <div class="image">
+            <img src="/Uploads/Poster/@movie.Poster" alt="">
+        </div>
+    </div>
+    <h1 style=" font-family: Times New Roman, Times, serif; text-align: center; text-transform: uppercase;
+  color: #4CAF50;">@movie.Title</h1>
+
+    <ul class="showcase">
+        <li>
+            <div class="seat"></div>
+            <small>Available</small>
+        </li>
+        <li>
+            <div class="seat selected"></div>
+            <small>Selected</small>
+        </li>
+        <li>
+            <div class="seat reserved"></div>
+            <small>Reserved</small>
+        </li>
+        <li>
+            <div class="seat booked"></div>
+            <small>Booked</small>
+        </li>
+    </ul>
+
+    <div class="container">
+        <div class="screen"></div>
+        @foreach (var x in Model.DecoratedShowSeats)
+        {
+            <div class="row">
+                @foreach (var seat in x)
+                {
+
+                    <div class="seat @seat.SeatStatus.ToLower()" data-show-seat-id="@seat.Id">
+                        @seat.SeatName
+                    </div>
+                }
+            </div>
+        }
+    </div>
+
+    @* <p class="text">
+    You have selected <span id="count">0</span> seats.
+    for a price of $<span id="total">0</span>
+    </p> *@
+
+    <button type="button" class="book" id="checkOut">BOOK NOW</button>
+
+</div>
+
+
+<script src="/MovieShowCSS/MovieShowSeatsScript.js"></script>
+<style>
+    .d-none {
+        display: none;
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        //new code here
+        const checkoutBtn = document.querySelector("#checkOut");
+
+        checkoutBtn.addEventListener('click', e => {
+            e.preventDefault();
+            const userAck = confirm("Are you sure you want to book?");
+            if (!userAck) return;
+            // fetch here
+
+            const selectedSeatElms = Array.from(document.querySelectorAll(".selected.available"));
+
+            if (selectedSeatElms.length == 0) {
+                alert("Please select seats first"); return;
+            }
+
+            const seatData = [];
+            console.log(selectedSeatElms);
+            for (const seat of selectedSeatElms) {
+                seatData.push({
+                    ShowSeatId: seat.dataset.showSeatId
+                });
+            }
+            const requestData = {
+                ShowId: @Model.Show.Id,
+                ShowSeatVms: seatData
+            };
+
+            fetch('/Ticket/BookingTicket', {
+                method: 'POST',
+                body: JSON.stringify(requestData),
+                headers:
+                {
+                    'Content-Type': 'application/json'
+                    // Add other headers if needed
+                }
+            })//.then(res => res.json())
+                .then(res => {
+                    if (!res.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return res.json();
+                })
+                .then(x => {
+                    console.log('Server Response:', x);
+                    if (x.success) {
+                        //alert("Ticket Booked Successfully");
+                        //window.location.reload();
+
+                        window.location.href = x.redir; //redir is variable assigned in BookingTicket action
+
+                    }
+                    else {
+                        alert("Error on booking ticket.");
+                    }
+                })
+
+        });
+    });
+</script>

@@ -9,7 +9,6 @@
     <ItemGroup>
       <Content Remove="Views\PublicInterface\Contact.cshtml" />
       <Content Remove="Views\PublicInterface\Index.cshtml" />
-      <Content Remove="Views\PublicInterface\List.cshtml" />
       <Content Remove="Views\PublicInterface\Login.cshtml" />
       <Content Remove="Views\PublicInterface\Register.cshtml" />
       <Content Remove="Views\Shared\_AdminPanelLayout.cshtml" />
@@ -29,10 +28,15 @@
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
             <PrivateAssets>all</PrivateAssets>
         </PackageReference>
+        <PackageReference Include="Portable.System.DateTimeOnly" Version="7.0.1" />
+        <PackageReference Include="Stripe.net" Version="43.6.0" />
     </ItemGroup>
     <ItemGroup>
       <Folder Include="Assets\" />
       <Folder Include="Dto\" />
+      <Folder Include="wwwroot\Assets\icons\" />
+      <Folder Include="wwwroot\Bootswatch\" />
+      <Folder Include="wwwroot\Login\Image\" />
       <Folder Include="wwwroot\Uploads\" />
       <Folder Include="wwwroot\Uploads\Poster\" />
       <Folder Include="wwwroot\Uploads\Trailer\" />
@@ -43,7 +47,6 @@
     <ItemGroup>
       <_ContentIncludedByDefault Remove="Views\PublicInterface\Contact.cshtml" />
       <_ContentIncludedByDefault Remove="Views\PublicInterface\Index.cshtml" />
-      <_ContentIncludedByDefault Remove="Views\PublicInterface\List.cshtml" />
       <_ContentIncludedByDefault Remove="Views\PublicInterface\Login.cshtml" />
       <_ContentIncludedByDefault Remove="Views\PublicInterface\Register.cshtml" />
       <_ContentIncludedByDefault Remove="Views\Shared\_EmptyLayout.cshtml" />
@@ -51,13 +54,9 @@
     <ItemGroup>
       <None Include="Views\PublicInterface\Contact.cshtml" />
       <None Include="Views\PublicInterface\Index.cshtml" />
-      <None Include="Views\PublicInterface\List.cshtml" />
       <None Include="Views\PublicInterface\Login.cshtml" />
       <None Include="Views\PublicInterface\Register.cshtml" />
       <None Include="Views\Shared\_AdminPanelLayout.cshtml" />
-    </ItemGroup>
-    <ItemGroup>
-      <UpToDateCheckInput Remove="Views\PublicInterface\List.cshtml" />
     </ItemGroup>
     <ItemGroup>
       <UpToDateCheckInput Remove="Views\PublicInterface\Contact.cshtml" />

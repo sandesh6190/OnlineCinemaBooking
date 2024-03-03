@@ -35,8 +35,6 @@ public class MovieIndexVm
             SearchGenreId
         );
     }
-
-
-
     public List<Movie> Movies;
+    // public Movie Movies;
 }

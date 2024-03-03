@@ -39,6 +39,12 @@ public class AuthManager : IAuthManager
         {
             new("Id", user.Id.ToString())
         };
+
+        if (user.UserType == UserTypeConstants.Admin)
+        {
+            claims.Add(new Claim(ClaimsIdentity.DefaultRoleClaimType, "Admin"));
+        }
+
         var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
         await httpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,
             new ClaimsPrincipal(claimsIdentity));

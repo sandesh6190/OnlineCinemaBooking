@@ -1,5 +1,6 @@
 ﻿using System.Transactions;
 using AspNetCoreHero.ToastNotification.Abstractions;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SimpleAuth.Data;
@@ -8,6 +9,7 @@ using SimpleAuth.ViewModels.Setup;
 
 namespace SimpleAuth.AdminPanel.Controllers;
 [Area("AdminPanel")]
+[Authorize(Roles = "Admin")]
 public class LanguageController : Controller
 {
     private readonly ApplicationDbContext _context;
