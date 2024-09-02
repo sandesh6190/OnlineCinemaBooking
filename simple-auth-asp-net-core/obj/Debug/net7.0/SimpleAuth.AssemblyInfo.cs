@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SimpleAuth")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+15fe40fd34395dc47d40da5cfe758d711c608ef6")]
 [assembly: System.Reflection.AssemblyProductAttribute("SimpleAuth")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SimpleAuth")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

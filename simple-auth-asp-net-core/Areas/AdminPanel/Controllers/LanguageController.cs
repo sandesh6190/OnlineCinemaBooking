@@ -131,7 +131,7 @@ public class LanguageController : Controller
                 throw new Exception("Language couldn't found.");
             }
 
-            using var tx = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled);
+            // using var tx = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled);
             var vm = new LanguageEditVm();
             vm.Name = language.Name;
             vm.Country = language.Country;

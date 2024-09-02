@@ -34,6 +34,7 @@ public class PublicInterfaceController : Controller
     {
         if (!ModelState.IsValid)
         {
+            _notifyService.Warning("Invalid Input.");
             return View(vm);
         }
 

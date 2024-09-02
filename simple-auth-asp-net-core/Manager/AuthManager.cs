@@ -37,12 +37,12 @@ public class AuthManager : IAuthManager
         var httpContext = _httpContextAccessor.HttpContext;
         var claims = new List<Claim>
         {
-            new("Id", user.Id.ToString())
+            new("Id", user.Id.ToString()) //Id here is the type of claim, claim stores the user's permission,roles,attributes and so on.
         };
 
         if (user.UserType == UserTypeConstants.Admin)
         {
-            claims.Add(new Claim(ClaimsIdentity.DefaultRoleClaimType, "Admin"));
+            claims.Add(new Claim(ClaimsIdentity.DefaultRoleClaimType, "Admin")); //adding user's role as admin in claim
         }
 
         var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
